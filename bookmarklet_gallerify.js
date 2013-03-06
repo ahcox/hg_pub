@@ -6,9 +6,19 @@
  * Copyright Andrew H. Cox 2012. All rights reserved worldwide.
  **/
 
-GALLERY_HOST_PREFIX="http://hoog.li/g?g=";
-var e=window.location;
-/* console.log("Going to build a gallery for: "+e); */
-var t=encodeURIComponent(e),n=GALLERY_HOST_PREFIX+t;
-console.log("About to hop to: "+n),window.location=n,define("bookmarklet_gallerify",function(){});
+/*
+GALLERY_HOST_PREFIX="http://hoog.li/g?g="
+var gallery_target = window.location;
 
+try {
+   console.log("Going to build a gallery for: " + gallery_target);
+} catch(e) {}
+var encoded_target = encodeURIComponent(gallery_target);
+
+var next_loc = GALLERY_HOST_PREFIX+encoded_target;
+try{ console.log("About to hop to: " + next_loc); } catch(e){}
+
+window.location = next_loc;
+*/
+
+window.location = "http://hoog.li/g?g=" + encodeURIComponent(window.location);
